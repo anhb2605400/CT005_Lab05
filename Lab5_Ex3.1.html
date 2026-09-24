@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Cấu hình Referrer cho phép phát video từ file cục bộ (file://) -->
     <meta name="referrer" content="no-referrer">
-    <title>Lợi Ích Của Công Nghệ Số Trong Học Tập</title>
+    <title>Lê Phạm Nhật Anh | Hồ sơ học tập</title>
     <style>
         * {
             box-sizing: border-box;
@@ -13,146 +12,282 @@
             padding: 0;
         }
 
+        :root {
+            --ink: #172033;
+            --muted: #657089;
+            --blue: #176b87;
+            --blue-dark: #0d4357;
+            --mint: #dff4eb;
+            --paper: #fffdf8;
+            --line: #d9e4e1;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f4f8;
-            color: #333;
+            font-family: Georgia, 'Times New Roman', serif;
+            background: #eef3f0;
+            color: var(--ink);
             line-height: 1.6;
-            padding: 20px;
+            padding: 28px 18px;
         }
 
         .container {
-            max-width: 850px;
+            max-width: 1050px;
             margin: 0 auto;
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            padding: 30px;
+            background: var(--paper);
+            border: 1px solid var(--line);
+            box-shadow: 0 18px 45px rgba(23, 32, 51, 0.1);
+            padding: 48px;
         }
 
-        /* Header Styling */
         header {
-            text-align: center;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #e2e8f0;
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 36px;
+            align-items: end;
+            margin-bottom: 44px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--ink);
+        }
+
+        .eyebrow {
+            color: var(--blue);
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
         }
 
         h1 {
-            color: #0b4998;
-            font-size: 2rem;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-            letter-spacing: 0.5px;
+            font-size: clamp(2.3rem, 6vw, 4.8rem);
+            line-height: 0.98;
+            letter-spacing: -0.04em;
+            margin-bottom: 20px;
         }
 
-        .description {
-            font-size: 1.15rem;
-            color: #1e6091;
-            font-weight: 600;
+        .intro {
+            color: var(--muted);
+            font-size: 1.1rem;
+            max-width: 560px;
         }
 
-        /* Content Sections */
+        .student-card {
+            background: var(--mint);
+            border-left: 5px solid var(--blue);
+            padding: 22px 24px;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+        }
+
+        .student-card p {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(13, 67, 87, 0.15);
+            font-size: 0.92rem;
+        }
+
+        .student-card p:last-child {
+            border-bottom: 0;
+        }
+
+        .student-card strong {
+            color: var(--blue-dark);
+        }
+
         .section-block {
-            margin-bottom: 35px;
+            margin-bottom: 48px;
         }
 
         .section-title {
-            font-size: 1.3rem;
-            color: #0b4998;
-            margin-bottom: 15px;
+            color: var(--blue-dark);
+            font-size: 1.65rem;
+            margin-bottom: 18px;
             display: flex;
             align-items: center;
+            gap: 10px;
         }
 
-        /* Infographic Styling */
+        .section-title span {
+            color: var(--blue);
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
         .infographic-container {
             text-align: center;
+            padding: 20px;
+            border: 1px solid var(--line);
+            background: #fff;
         }
 
         .infographic-img {
             max-width: 100%;
             height: auto;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin: 0 auto;
+            box-shadow: 0 8px 24px rgba(23, 32, 51, 0.12);
         }
 
-        /* Responsive Video Embed (16:9 Ratio) */
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            background-color: #000;
+        .products {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
         }
 
+        .product {
+            border-top: 4px solid var(--blue);
+            background: #f5f8f6;
+            padding: 22px;
+        }
+
+        .product h3 {
+            font-size: 1.25rem;
+            margin-bottom: 5px;
+        }
+
+        .product p {
+            color: var(--muted);
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+
+        .pdf-container {
+            height: 540px;
+        }
+
+        .pdf-container iframe,
         .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
             border: 0;
+            display: block;
         }
 
-        /* Footer / Copyright Styling */
+        .media-frame {
+            overflow: hidden;
+            background: #dfe8e5;
+            box-shadow: 0 8px 20px rgba(23, 32, 51, 0.1);
+        }
+
+        .video-container {
+            position: relative;
+            aspect-ratio: 16 / 9;
+        }
+
+        .text-link {
+            color: var(--blue-dark);
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            font-size: 0.88rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .text-link:hover {
+            text-decoration: underline;
+        }
+
         footer {
-            background-color: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 15px;
-            font-size: 0.85rem;
-            color: #64748b;
-            text-align: center;
-            margin-top: 20px;
+            border-top: 1px solid var(--line);
+            padding-top: 22px;
+            color: var(--muted);
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            font-size: 0.8rem;
         }
 
         footer strong {
-            color: #334155;
-            display: block;
-            margin-bottom: 5px;
+            color: var(--ink);
+        }
+
+        @media (max-width: 720px) {
+            body {
+                padding: 12px;
+            }
+
+            .container {
+                padding: 28px 18px;
+            }
+
+            header,
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                gap: 24px;
+                margin-bottom: 32px;
+            }
+
+            .student-card p {
+                display: block;
+            }
+
+            .student-card strong {
+                display: block;
+            }
+
+            .pdf-container {
+                height: 420px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Tiêu đề và Mô tả ngắn -->
+    <main class="container">
         <header>
-            <h1>LỢI ÍCH CỦA CÔNG NGHỆ SỐ TRONG HỌC TẬP</h1>
-            <p class="description">Mở rộng cơ hội học tập, kết nối và phát triển mỗi ngày</p>
+            <div>
+                <p class="eyebrow">Hồ sơ cá nhân / CT005</p>
+                <h1>Lê Phạm<br>Nhật Anh</h1>
+                <p class="intro">Sinh viên ngành An toàn thông tin tại Trường Đại học Cần Thơ, quan tâm đến công nghệ số và những cách học tập hiệu quả trong thời đại mới.</p>
+            </div>
+            <div class="student-card" aria-label="Thông tin sinh viên">
+                <p><strong>Trường</strong><span>Đại học Cần Thơ</span></p>
+                <p><strong>Khóa</strong><span>52</span></p>
+                <p><strong>Ngành</strong><span>An toàn thông tin</span></p>
+                <p><strong>MSSV</strong><span>B2605400</span></p>
+                <p><strong>Lớp học phần</strong><span>26-27HK1-CT005D05</span></p>
+            </div>
         </header>
 
-        <!-- Khung hiển thị Infographic -->
         <div class="section-block">
-            <h2 class="section-title">📌 Infographic</h2>
+            <h2 class="section-title"><span>Sản phẩm 01</span> Infographic</h2>
             <div class="infographic-container">
                 <img class="infographic-img" src="Lab05_Ex2.1.png" alt="Infographic Lợi ích của công nghệ số trong học tập">
             </div>
         </div>
 
-        <!-- Khung hiển thị Video YouTube -->
         <div class="section-block">
-            <h2 class="section-title">🎬 Video Tham Khảo</h2>
-            <div class="video-container">
-                <iframe 
-                    src="https://www.youtube.com/embed/MdoYag_yIzc?enablejsapi=1&widget_referrer=http://localhost" 
-                    title="Lợi ích của công nghệ số trong học tập" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="no-referrer"
-                    allowfullscreen>
-                </iframe>
+            <h2 class="section-title"><span>Sản phẩm 02 + 03</span> Tài liệu & video</h2>
+            <div class="products">
+                <article class="product">
+                    <h3>Ứng dụng công nghệ số trong học tập</h3>
+                    <p>Tài liệu PDF trình bày nội dung tham khảo và hình ảnh minh họa.</p>
+                    <div class="media-frame pdf-container">
+                        <iframe src="Lab05_Ex1.2.pdf" title="Tài liệu PDF về ứng dụng công nghệ số trong học tập"></iframe>
+                    </div>
+                    <a class="text-link" href="Lab05_Ex1.2.pdf" target="_blank" rel="noopener">Mở PDF trong tab mới →</a>
+                </article>
+
+                <article class="product">
+                    <h3>Video tham khảo</h3>
+                    <p>Video về lợi ích của công nghệ số trong học tập.</p>
+                    <div class="media-frame video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/MdoYag_yIzc?si=Ppqn6Jd2KKV-1wzc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" title="Lợi ích của công nghệ số trong học tập" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="no-referrer" allowfullscreen></iframe>
+                    </div>
+                </article>
             </div>
         </div>
 
-        <!-- Ghi chú bản quyền -->
         <footer>
-            <strong>BẢN QUYỀN HÌNH ẢNH:</strong>
-            <p>Infographic tạo bởi Canva AI, hình ảnh từ Unsplash (Unsplash grants you an irrevocable, nonexclusive, worldwide copyright license to download, copy, modify, distribute, perform, and use images from Unsplash for free, including for commercial purposes, without permission from or attributing the photographer or Unsplash. This license does not include the right to compile images from Unsplash to replicate a similar or competing service).</p>
+            <strong>Ghi chú nguồn:</strong>
+            <p>Infographic được tạo bởi Canva AI. Hình ảnh được sử dụng từ Unsplash theo giấy phép Unsplash: Unsplash grants you an irrevocable, nonexclusive, worldwide copyright license to download, copy, modify, distribute, perform, and use images from Unsplash for free, including for commercial purposes, without permission from or attributing the photographer or Unsplash. This license does not include the right to compile images from Unsplash to replicate a similar or competing service.</p>
         </footer>
-    </div>
+    </main>
 
 </body>
 </html>
