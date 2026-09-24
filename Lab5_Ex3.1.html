@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Cấu hình Referrer cho phép phát video từ file cục bộ (file://) -->
+    <meta name="referrer" content="no-referrer">
+    <title>Lợi Ích Của Công Nghệ Số Trong Học Tập</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        h1 {
+            color: #0b4998;
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .description {
+            font-size: 1.15rem;
+            color: #1e6091;
+            font-weight: 600;
+        }
+
+        /* Content Sections */
+        .section-block {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            color: #0b4998;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Infographic Styling */
+        .infographic-container {
+            text-align: center;
+        }
+
+        .infographic-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Video Embed (16:9 Ratio) */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            background-color: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Footer / Copyright Styling */
+        footer {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 15px;
+            font-size: 0.85rem;
+            color: #64748b;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        footer strong {
+            color: #334155;
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Tiêu đề và Mô tả ngắn -->
+        <header>
+            <h1>LỢI ÍCH CỦA CÔNG NGHỆ SỐ TRONG HỌC TẬP</h1>
+            <p class="description">Mở rộng cơ hội học tập, kết nối và phát triển mỗi ngày</p>
+        </header>
+
+        <!-- Khung hiển thị Infographic -->
+        <div class="section-block">
+            <h2 class="section-title">📌 Infographic</h2>
+            <div class="infographic-container">
+                <img class="infographic-img" src="Lab05_Ex2.1.png" alt="Infographic Lợi ích của công nghệ số trong học tập">
+            </div>
+        </div>
+
+        <!-- Khung hiển thị Video YouTube -->
+        <div class="section-block">
+            <h2 class="section-title">🎬 Video Tham Khảo</h2>
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/MdoYag_yIzc?enablejsapi=1&widget_referrer=http://localhost" 
+                    title="Lợi ích của công nghệ số trong học tập" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="no-referrer"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Ghi chú bản quyền -->
+        <footer>
+            <strong>BẢN QUYỀN HÌNH ẢNH:</strong>
+            <p>Infographic tạo bởi Canva AI, hình ảnh từ Unsplash (Unsplash grants you an irrevocable, nonexclusive, worldwide copyright license to download, copy, modify, distribute, perform, and use images from Unsplash for free, including for commercial purposes, without permission from or attributing the photographer or Unsplash. This license does not include the right to compile images from Unsplash to replicate a similar or competing service).</p>
+        </footer>
+    </div>
+
+</body>
+</html>
